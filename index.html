@@ -343,6 +343,61 @@
                 padding: 2rem;
             }
         }
+        /* === PHONE MOCKUP CUSTOM (LOGO DENTRO DEL CÍRCULO) === */
+
+.phone-mockup-custom {
+    width: 300px;
+    height: 600px;
+    border-radius: 40px;
+    background: #111;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #0a0a0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.logo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ec4899 0%, #a855f7 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 25px rgba(236,72,153,0.9),
+        0 0 50px rgba(168,85,247,0.6);
+}
+
+.logo-circle img {
+    width: 70%;
+    height: auto;
+    display: block;
+}
+
+.start-game-btn {
+    width: 220px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
     </style>
 </head>
 <body>
@@ -370,10 +425,17 @@
         
         <div class="feature">
             <div class="feature-image">
-<img
-class="phone-mockup"
-alt="Darely App Screenshot"
-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23a855f7'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='600' rx='40' fill='%23111'/%3E%3Crect x='20' y='20' width='260' height='560' rx='30' fill='%230a0a0f'/%3E%3Cimage x='60' y='110' width='180' height='180' preserveAspectRatio='xMidYMid meet' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABVUAAAgACAYAAAAmDtM7AAAQAElEQVR4Aez9eZ...'/%3E%3Crect x='40' y='400' width='220' height='60' rx='30' fill='url(%23grad3)'/%3E%3Ctext x='150' y='438' font-family='Arial' font-size='18' font-weight='bold' fill='white' text-anchor='middle'%3ESTART GAME%3C/text%3E%3C/svg%3E">
+<div class="phone-mockup-custom">
+  <div class="phone-screen">
+    
+    <div class="logo-circle">
+      <img src="images/logo3.png" alt="Darely Logo">
+    </div>
+
+    <button class="start-game-btn">START GAME</button>
+
+  </div>
+</div>
 
             </div>
             <div class="feature-content">
@@ -449,7 +511,7 @@ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
         <div class="contact-email">
-            <p>Or email us directly at <a href="mailto:hello@darely.app">hello@darely.app</a></p>
+            <p>Or email us directly at <a href="mailto:support@darely.app">support@darely.app</a></p>
         </div>
     </section>
 
