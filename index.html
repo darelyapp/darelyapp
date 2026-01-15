@@ -432,6 +432,106 @@ body.age-verification-active {
 .age-overlay.hidden {
     display: none;
 }
+/* ===== AGE VERIFICATION POPUP ===== */
+
+.age-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.age-modal {
+    background: #0a0a0f;
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow:
+        0 0 60px rgba(168,85,247,0.35),
+        0 0 120px rgba(236,72,153,0.25);
+    border: 1px solid rgba(168,85,247,0.4);
+}
+
+.age-badge {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#a855f7,#ec4899);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    font-weight: 900;
+    box-shadow: 0 0 40px rgba(236,72,153,0.6);
+}
+
+.age-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg,#fff,#a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.age-message {
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.age-notice {
+    background: rgba(236,72,153,0.1);
+    border: 1px solid rgba(236,72,153,0.3);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.8rem;
+    color: #ec4899;
+    font-weight: 600;
+}
+
+.age-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.age-buttons button {
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-accept {
+    background: linear-gradient(135deg,#a855f7,#ec4899);
+    color: #fff;
+}
+
+.btn-decline {
+    background: transparent;
+    border: 2px solid rgba(168,85,247,0.5);
+    color: #d1d5db;
+}
+
+.age-footer {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.age-overlay.hidden {
+    display: none;
+}
 
 
     </style>
