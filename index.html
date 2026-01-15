@@ -424,11 +424,60 @@
         drop-shadow(0 0 35px rgba(236,72,153,0.9))
         drop-shadow(0 0 70px rgba(168,85,247,0.6));
 }
+body.age-verification-active {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.age-overlay.hidden {
+    display: none;
+}
 
 
     </style>
 </head>
 <body>
+    <!-- AGE VERIFICATION POPUP -->
+<div id="ageVerificationOverlay" class="age-overlay">
+    <div class="age-modal">
+        <div class="age-badge">
+            <span class="age-number">18</span>
+            <span class="age-plus">+</span>
+        </div>
+
+        <div class="warning-icon">⚠️</div>
+
+        <h2 class="age-title">Age Verification Required</h2>
+
+        <p class="age-message">
+            This game is intended for adults only.<br>
+            You must be 18 years or older to enter.
+        </p>
+
+        <div class="age-notice">
+            <p>
+                Darely is a party game.<br>
+                It may include bold challenges, social pressure, and explicit language.
+            </p>
+        </div>
+
+        <div class="age-buttons">
+            <button id="ageAccept" class="btn-accept">
+                <span class="btn-icon">✓</span>
+                I'm 18+ / Enter
+            </button>
+            <button id="ageDecline" class="btn-decline">
+                <span class="btn-icon">✕</span>
+                I'm Under 18 / Leave
+            </button>
+        </div>
+
+        <p class="age-footer">
+            By entering, you confirm you meet the age requirement
+        </p>
+    </div>
+</div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -584,6 +633,41 @@ Pass the phone, face the challenge, and make your choice in front of everyone. T
             }
         });
     });
+</script>
+<script>
+(function () {
+    const STORAGE_KEY = 'darely_age_verified';
+
+    const overlay = document.getElementById('ageVerificationOverlay');
+    const acceptBtn = document.getElementById('ageAccept');
+    const declineBtn = document.getElementById('ageDecline');
+
+    if (!overlay) return;
+
+    function isVerified() {
+        return localStorage.getItem(STORAGE_KEY) === 'true';
+    }
+
+    function verify() {
+        localStorage.setItem(STORAGE_KEY, 'true');
+        overlay.classList.add('hidden');
+        document.body.classList.remove('age-verification-active');
+    }
+
+    function decline() {
+        window.location.href = 'about:blank';
+    }
+
+    if (!isVerified()) {
+        document.body.classList.add('age-verification-active');
+        overlay.classList.remove('hidden');
+    } else {
+        overlay.classList.add('hidden');
+    }
+
+    acceptBtn.addEventListener('click', verify);
+    declineBtn.addEventListener('click', decline);
+})();
 </script>
 
 </body>
