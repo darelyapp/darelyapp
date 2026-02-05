@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Darely</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            color: #d1d5db;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 1.5rem 2rem;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        main {
+            flex: 1;
+            padding: 3rem 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(17, 17, 31, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(168, 85, 247, 0.3);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #d1d5db;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            margin-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            color: #d1d5db;
+        }
+
+        .highlight {
+            background: rgba(168, 85, 247, 0.1);
+            border-left: 4px solid #a855f7;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .email-link {
+            color: #a855f7;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #ec4899;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #9ca3af;
+            font-style: italic;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        footer {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #a855f7;
+        }
+
+        .copyright {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .tagline {
+                display: none;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="images/logo3.png" alt="Darely Logo">
+                <span class="logo-text">Darely</span>
+            </a>
+            <span class="tagline">Chance Decides, You Comply</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="/" class="back-home">← Back to Home</a>
+            
+            <h1>Privacy Policy</h1>
+
+            <div class="highlight">
+                <p><strong>Darely respects your privacy.</strong> This app does not collect, store, or share any personal data.</p>
+            </div>
+
+            <h2>Data Collection</h2>
+            <p>The app does not require user registration or login. Player names entered in the app are used only locally and are not stored or transmitted.</p>
+
+            <h2>Personal Information</h2>
+            <p>We do not collect location data, contacts, or any sensitive personal information.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>Third-party services may be used only for basic analytics or app performance improvements.</p>
+
+            <h2>Age Requirement</h2>
+            <p>Darely is intended for users aged 18+.</p>
+
+            <div class="contact-box">
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p>📧 <a href="mailto:support@darely.app" class="email-link">support@darely.app</a></p>
+            </div>
+
+            <p class="last-updated">Last updated: February 2026</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/privacypolicy">Privacy Policy</a>
+                <a href="mailto:support@darely.app">Contact</a>
+            </div>
+            <p class="copyright">© 2026 Darely. All rights reserved. Chance decides, you comply.</p>
+        </div>
+    </footer>
+</body>
+</html>
